@@ -6,4 +6,4 @@
 <h5> Mount your Raspberry Pi Pico and copy the  adafruit-circuitpython-raspberry_pi_pico-pt_BR-7.3.3.uf2 file into your root path device. </h5>
 <h5> Copy all files of this repository into a root path too. </h5>
 <br>
-<h2> Done! ;)</h5>
+<h2> Done! ;).</h5>
